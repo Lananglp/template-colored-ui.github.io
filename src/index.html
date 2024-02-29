@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="noodp">
+    <link rel="canonical" href="your url site">
+    <meta itemprop="name" content="your title">
+    <meta property="og:title" content="your title">
+    <meta property="og:site_name" content="your title">
+    <meta property="og:type" content="website">
+    <meta name="description" content="your description">
+    <meta itemprop="description" content="your description">
+    <meta property="og:description" content="your description">
+    <meta name="keywords" content="your keywords">
+    <meta property="og:image" content="your url image">
+    <meta property="og:url" content="your url site">
+    <link rel="icon" type="image/png" href="../public/assets/icon/cylareLogo.png">
+
+    <title>LD template colored UI</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+
+</head>
+<body>
+
+    <header class="fixed inset-x-0 z-50 overflow-y-hidden">
+        <nav data-aos="fade-down" data-aos-duration="1000" class="backdrop-blur-[2px] bg-gray-950/50">
+            <div class="container mx-auto lg:px-24 px-8 py-4">
+                <div class="flex justify-between items-center">
+                    <div class="flex justify-between w-full items-center">
+                        <a href="#">
+                            <div class="flex items-center text-shadow">
+                                <img src="../public/assets/icon/cylareLogo.png" alt="cylareLogo.png" width="32" class="saturate-100 hue-rotate-[-40deg] me-2">
+                                <span class="text-white text-xl font-semibold">Cylare</span>
+                            </div>
+                        </a>
+                        <button id="openButton" type="button" class="text-green-400 hover:text-green-700 block lg:hidden duration-200"><i class="fa fa-fw fa-bars"></i></button>
+                    </div>
+                    <ul id="navNavbar" class="hidden lg:flex items-center">
+                        <li class="mx-2 my-1 md:my-0"><a href="#bookingNow" class="duration-200 inline-block w-full text-gray-300 hover:text-green-400 text-nowrap">Booking now</a></li>
+                        <li class="mx-2 my-1 md:my-0"><a href="#schedule" class="duration-200 inline-block w-full text-gray-300 hover:text-green-400 text-nowrap">schedule</a></li>
+                        <li class="mx-2 my-1 md:my-0"><a href="#promo" class="duration-200 inline-block w-full text-gray-300 hover:text-green-400 text-nowrap">Discount</a></li>
+                        <li class="mx-2 my-1 md:my-0"><a href="#blog" class="duration-200 inline-block w-full text-gray-300 hover:text-green-400 text-nowrap">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="navbar" class="hidden opacity-0 fixed bg-gray-950/90 inset-0 transition-all duration-500">
+            <div class="absolute inset-x-0 top-0 flex justify-between items-center mx-8 my-4">
+                <a href="#">
+                    <div class="flex items-center text-shadow">
+                        <img src="../public/assets/icon/cylareLogo.png" alt="cylareLogo.png" width="32" class="saturate-100 hue-rotate-[-40deg] me-2">
+                        <span class="text-white text-xl font-semibold">Cylare</span>
+                    </div>
+                </a>
+                <button id="closeButton" type="button" class="text-green-400 hover:text-green-700 duration-200"><i class="fa fa-fw fa-xmark"></i></button>
+            </div>
+            <div class="h-full flex justify-center items-end">
+                <!-- hapus flex justify-center items-center dan ubah h ke 90vh untuk menu banyak -->
+                <div class="flex justify-center items-center h-[100vh] w-full overflow-x-hidden scroll-pt-32 overflow-y-scroll">
+                    <ul class="text-center">
+                        <li class="mx-2 py-2"><a onclick="closeNavbar()" href="#bookingNow" class="duration-200 inline-block text-gray-400 hover:text-green-400">Booking now</a></li>
+                        <li class="mx-2 py-2"><a onclick="closeNavbar()" href="#schedule" class="duration-200 inline-block text-gray-400 hover:text-green-400">schedule</a></li>
+                        <li class="mx-2 py-2"><a onclick="closeNavbar()" href="#promo" class="duration-200 inline-block text-gray-400 hover:text-green-400">Discount</a></li>
+                        <li class="mx-2 py-2"><a onclick="closeNavbar()" href="#blog" class="duration-200 inline-block text-gray-400 hover:text-green-400">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="relative">
+        <video autoplay muted loop id="myVideo" class="w-full h-[75vh] object-cover object-center border-b-2 border-green-700 shadow-2xl shadow-green-950/50">
+          <source src="../public/assets/video/cinematic.mp4" type="video/mp4">
+          <!-- Sumber alternatif jika format video tidak didukung -->
+          <!-- <source src="nama-video.webm" type="video/webm"> -->
+          <!-- <source src="nama-video.ogg" type="video/ogg"> -->
+          Maaf, browser Anda tidak mendukung tag video.
+        </video>
+
+        <div class="absolute start-0 top-0 w-full h-full bg-gray-950/25 text-white flex flex-col justify-center">
+            <div class="container mx-auto">
+                <div class="lg:mx-24 max-w-3xl">
+                    <p class="mb-2 text-lg font-medium text-green-400">Colored UI</p>
+                    <h1 class="mb-8 text-5xl font-semibold">Cylare is the best choice<br>for your <span class="text-green-400">adventure</span></h1>
+                    <p class="mb-8 text-gray-200 text-lg leading-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus consequuntur veritatis expedita id ut voluptates, laborum iste inventore qui vitae quia tempore quaerat blanditiis quos nemo doloremque soluta ullam velit.</p>
+                    <a href="#" class="bg-green-700 hover:bg-green-500 rounded-md px-4 py-2 duration-200">Get started for free <i class="fa fa-sm fa-fw fa-arrow-right align-middle"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto bg-gray-950">
+        <div class="relative lg:mx-24 py-24">
+            <div class="absolute inset-x-0 -top-12 grid grid-cols-3 gap-8">
+                <div class="bg-gray-950 border-2 border-green-700 shadow-2xl shadow-green-950/50 rounded-md text-white p-4">
+                    <i class="mb-4 fa fa-xl fa-fw fa-circle-check text-green-400"></i>
+                    <div>
+                        <h6 class="mb-2 font-medium text-xl">Lorem, ipsum dolor.</h6>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis beatae eligendi autem porro tempora doloremque.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-950 border-2 border-green-700 shadow-2xl shadow-green-950/50 rounded-md text-white p-4">
+                    <i class="mb-4 fa fa-xl fa-fw fa-circle-check text-green-400"></i>
+                    <div>
+                        <h6 class="mb-2 font-medium text-xl">Lorem, ipsum dolor.</h6>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis beatae eligendi autem porro tempora doloremque.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-950 border-2 border-green-700 shadow-2xl shadow-green-950/50 rounded-md text-white p-4">
+                    <i class="mb-4 fa fa-xl fa-fw fa-circle-check text-green-400"></i>
+                    <div>
+                        <h6 class="mb-2 font-medium text-xl">Lorem, ipsum dolor.</h6>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis beatae eligendi autem porro tempora doloremque.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const openButton = document.getElementById("openButton");
+        const closeButton = document.getElementById("closeButton");
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const navbar = document.getElementById("navbar");
+
+            openButton.addEventListener("click", () => {
+                navbar.classList.remove("hidden");
+                setTimeout(() => {
+                    navbar.classList.remove("opacity-0");
+                }, 1);
+            })
+            ;
+            closeButton.addEventListener("click", () => {
+                navbar.classList.add("opacity-0");
+                setTimeout(() => {
+                    navbar.classList.add("hidden");
+                }, 200);
+            });
+
+        });
+
+        function closeNavbar() {
+            navbar.classList.add("opacity-0");
+            setTimeout(() => {
+                navbar.classList.add("hidden");
+            }, 200);
+        }
+    </script>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
